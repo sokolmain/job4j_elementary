@@ -1,22 +1,24 @@
 package ru.job4j.calculator;
 
+import static ru.job4j.math.MathFunction.*;
+
 public class calculator {
 
     public static double sumAndMultiply(double first, double second) {
-        return ru.job4j.math.MathFunction.sum(first, second)
-                + ru.job4j.math.MathFunction.multiply(first, second);
+        return sum(first, second)
+                + multiply(first, second);
     }
 
     public static double divideAndSubtract(double first, double second) {
-        return  ru.job4j.math.MathFunction.divide(first, second)
-                + ru.job4j.math.MathFunction.subtract(first, second);
+        return  divide(first, second)
+                + subtract(first, second);
     }
 
     public static double sumAndMultiplyAnddivideAndSubtract(double first, double second) {
-        return ru.job4j.math.MathFunction.sum(first, second)
-                + ru.job4j.math.MathFunction.multiply(first, second)
-                + ru.job4j.math.MathFunction.divide(first, second)
-                + ru.job4j.math.MathFunction.subtract(first, second);
+        return sum(first, second)
+                + multiply(first, second)
+                + divide(first, second)
+                + subtract(first, second);
     }
 
     public static void main(String[] args) {
