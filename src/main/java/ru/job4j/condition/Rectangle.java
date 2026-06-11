@@ -1,0 +1,14 @@
+package ru.job4j.condition;
+
+public class Rectangle {
+
+    public static double diagonal (double lenght, double width) {
+        // Вычисление диагонали прямоугольника по теореме Пифагора
+        return Math.sqrt(Math.pow(lenght, 2) + Math.pow(width, 2));
+    }
+
+    public static void main(String[] args) {
+        double result = diagonal(3, 2);
+        System.out.println("Diagonal of rectangle with length 3 and width 4 is " + result);
+    }
+}
