@@ -6,7 +6,7 @@ import static org.assertj.core.api.Assertions.*;
 class CounterTest {
 
     @Test
-    void whenstart0andfinish10result55() {
+    void whenStart0AndFinish10Result55() {
         int start = 0, finish = 10;
         int expected = 55;
         int output = Counter.sum(start, finish);
@@ -14,7 +14,7 @@ class CounterTest {
     }
 
     @Test
-    void whenstart3andfinish8result33() {
+    void whenStart3AndFinish8Result33() {
         int start = 3;
         int finish = 8;
         int expected = 33;
@@ -23,11 +23,47 @@ class CounterTest {
     }
 
     @Test
-    void whenstart1andfinish1result1() {
+    void whenStart1AndFinish1Result1() {
         int start = 1;
         int finish = 1;
         int expected = 1;
         int output = Counter.sum(start, finish);
+        assertThat(output).isEqualTo(expected);
+    }
+
+    @Test
+    void whenSumEvenNumbersStart0AndFinish10Result30() {
+        int start = 0;
+        int finish = 10;
+        int expected = 30;
+        int output = Counter.sumByEven(start, finish);
+        assertThat(output).isEqualTo(expected);
+    }
+
+    @Test
+    void whenSumEvenNumbersStart3AndFinish8Result18() {
+        int start = 3;
+        int finish = 8;
+        int expected = 18;
+        int output = Counter.sumByEven(start, finish);
+        assertThat(output).isEqualTo(expected);
+    }
+
+    @Test
+    void whenSumEvenNumbersStart1AndFinish1Result0() {
+        int start = 1;
+        int finish = 1;
+        int expected = 0;
+        int output = Counter.sumByEven(start, finish);
+        assertThat(output).isEqualTo(expected);
+    }
+
+    @Test
+    void whenSumEvenNumbersStartMinus7AndFinish4ResultMinus6() {
+        int start = -7;
+        int finish = 4;
+        int expected = -6;
+        int output = Counter.sumByEven(start, finish);
         assertThat(output).isEqualTo(expected);
     }
 }
