@@ -23,4 +23,13 @@ class PointTest {
         assertThat(result).isEqualTo(expected, withPrecision(0.001));
     }
 
+    @Test
+    void whenPoints333And777Then() {
+        Point a = new Point(3, 3, 3);
+        Point b = new Point(7, 7, 7);
+        double result = a.distance3d(b);
+        double expected = 6.928;
+        assertThat(result).isEqualTo(expected, withPrecision(0.001));
+    }
+
 }
